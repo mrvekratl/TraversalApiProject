@@ -166,3 +166,4 @@ C:\Users\Monster\Desktop\Github\TraversalApiProject\TraversalApiProject\obj\Debu
 C:\Users\Monster\Desktop\Github\TraversalApiProject\TraversalApiProject\obj\Debug\net8.0\TraversalApiProject.pdb
 C:\Users\Monster\Desktop\Github\TraversalApiProject\TraversalApiProject\obj\Debug\net8.0\TraversalApiProject.genruntimeconfig.cache
 C:\Users\Monster\Desktop\Github\TraversalApiProject\TraversalApiProject\obj\Debug\net8.0\ref\TraversalApiProject.dll
+C:\Users\Monster\Desktop\Github\TraversalApiProject\TraversalApiProject\obj\Debug\net8.0\TraversalApiProject.sourcelink.json
