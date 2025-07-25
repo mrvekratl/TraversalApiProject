@@ -1,171 +1,118 @@
-# 🧭 TraversalCoreProject
+# 🌐 TraversalApiProject
 
-### Full-Stack Reservation System | Layered Architecture | Enterprise-Level Design
+TraversalApiProject is a dedicated **RESTful API service layer** designed to support and extend the capabilities of the [TraversalCoreProject](https://github.com/mrvekratl/TraversalCoreProject), a full-stack reservation platform.
 
----
-
-## 📌 About the Project
-
-  
-A full-featured **Reservation System Web Application** built with ASP.NET Core. This project is one of the most strategic milestones in my backend development journey. 
-Developed by following a 100-lesson intensive course by [Murat Yücedağ](https://www.youtube.com/playlist?list=PLKnjBHu2xXNMK5MBogdXmsXVi3K_eEZT5) , not just by watching but by actively coding, debugging, and improving the project step by step.
-
-This project aims to simulate a **real-world tour agency system** with advanced backend structures, clean architecture principles, layered design, and API integrations.
-
-My goal was not just to "complete" a project — I wanted to **deeply understand** professional software development concepts. I focused on architectural decisions, data flow, user management, validation logic, and dashboard features throughout the process.
+This API was created as part of a comprehensive software engineering training initiative. The goal was to **explore modular service architecture**, **consume and expose APIs**, and **simulate real-world data exchange** using modern .NET backend practices.
 
 ---
 
 ## 🛠️ Screenshots
 
-![TraversalCoreProject Screenshot](screenshot.png)
-![TraversalCoreProject Screenshot](screenshot2.png)
-![TraversalCoreProject Screenshot](screenshot3.png)
-![TraversalCoreProject Screenshot](screenshot4.png)
-![TraversalCoreProject Screenshot](screenshot5.png)
-![TraversalCoreProject Screenshot](screenshot6.png)
-![TraversalCoreProject Screenshot](screenshot7.png)
-![TraversalCoreProject Screenshot](screenshot8.png)
-![TraversalCoreProject Screenshot](screenshot9.png)
-![TraversalCoreProject Screenshot](screenshot10.png)
-![TraversalCoreProject Screenshot](screenshot11.png)
-![TraversalCoreProject Screenshot](screenshot12.png)
-![TraversalCoreProject Screenshot](screenshot13.png)
-![TraversalCoreProject Screenshot](screenshot14.png)
-![TraversalCoreProject Screenshot](screenshot15.png)
+![TraversalApiProject Screenshot](screenshot.png)
+![TraversalApiProject Screenshot](screenshot2.png)
+![TraversalApiProject Screenshot](screenshot3.png)
+![TraversalApiProject Screenshot](screenshot4.png)
 
 ---
 
-## 🚀 What This Project Taught Me
+## 🎯 Purpose of the Project
 
-- Applying **Clean Architecture** in a real project
-- Designing **multi-layered enterprise applications**
-- Working with **Entity Framework Core** using Code First + Migrations
-- Implementing **user authentication & role-based authorization**
-- Building and consuming **real-time SignalR services**
-- Developing and consuming **custom APIs**
-- Enforcing **data validation** with FluentValidation
-- Understanding **CQRS** patterns and separating concerns
+The TraversalApiProject was built with the following core objectives:
 
----
+- 🧩 **Modular Backend Design**  
+  Separate the data access and business logic into a decoupled API that serves multiple frontends.
 
-## 🛠️ Technologies Used
+- 🔗 **Live API Communication**  
+  Integrate external APIs using RapidAPI and `HttpClientFactory` to simulate dynamic, real-world data.
 
-- C#, ASP.NET Core MVC  
-- Entity Framework Core – Code First & Migrations  
-- SQL Server – Database Management System  
-- ASP.NET Identity – Authentication & Authorization  
-- FluentValidation – Advanced Form Controls  
-- ViewComponent & Partial View – Modular UI Components  
-- Role-Based Authorization – Admin/Member Separation  
-- AutoMapper, DTO Architecture, SOLID Principles
--  `SignalR` – Real-time data streaming
-- `RapidAPI` & custom API consumption
-- Clean Architecture Approach
-- `CQRS` (Command–Query Responsibility Segregation)
-- 🐘 PostgreSQL – Although the final version uses MSSQL, PostgreSQL was initially set up and partially integrated in the early stages of the training. I gained valuable experience configuring PostgreSQL connections, migrations, and schema setup during this process.
-
+- 📡 **Cross-Project Data Sharing**  
+  Enable the main MVC project (TraversalCoreProject) to consume and visualize data from this API via services.
 
 ---
 
-## 📂 Project Architecture
+## 🧠 Practical Scenarios Covered
 
-### **TraversalCoreProject/**
-| Folder                  | Description                                                 |
-|-------------------------|-------------------------------------------------------------|
-| **BusinessLayer**       | → Services and Business Rules                               |
-| **DataAccessLayer**     | → EF Core, DbContext, Generic Repository                    |
-| **DTOs**                | → Data Transfer Objects (API<->UI)                          |
-| **EntityLayer**         | → Domain Models (e.g., Destination, Reservation, AppUser)   |
-| **SignalRApi**          | → Real-time data provider (SignalR Hub)                     |
-| **SignalRApiForSql**    | → SQL-based real-time data broadcasting                     |
-| **SignalRConsume**      | → Client-side SignalR consumption module                    |
-| **TraversalCoreProject**| → Presentation Layer (Controllers, Views, Areas)            |
-├── Areas                 | # Admin and Member modules (Role-based)                     |
-├── Controllers           | # MVC + API Controllers                                     |
-├── CQRS                  | # Command & Query separation logic                          |
-├── Mapping               | # AutoMapper configurations                                 |
-├── LogFile               | # Custom logging utilities                                  |
-├── Models / Resources    | # Entity models, localization etc.                          |
-├── ViewComponents        | # Reusable UI components                                    |
-├── Views / wwwroot       | # Razor views and static content                            |
-└── Program.cs / Startup  | # App configuration                                         |
+This project goes beyond simply exposing CRUD endpoints. It served as a learning platform to experiment with diverse real-life backend scenarios:
 
----
+### ✅ API Production
 
-## 🔄 Integration with TraversalApiProject
+- Created REST endpoints for Destinations, Reservations, and Visitors
+- Used DTOs and AutoMapper to structure and decouple request/response models
+- Applied best practices in controller/service/repository layering
+- Practiced versioning, validation, and modular architecture
 
-This project is directly integrated with a custom API project developed as a separate microservice layer:
-- **GitHub Repo**: [TraversalApiProject](https://github.com/mrvekratl/TraversalApiProject)
+### ✅ API Consumption
 
-### 🔹 Why This Matters
+- Consumed the API from the TraversalCoreProject via service injection
+- Visualized dynamic visitor statistics using data fetched from the API
+- Enabled frontend dashboards to remain clean and data-driven
 
-By structuring this integration, I was able to gain hands-on experience with:
+### 🌍 External API Integration
 
-- 🔧 **Designing API Architectures** with multiple REST endpoints
-- 🔌 **Consuming both internal and external APIs** (e.g., RapidAPI for weather/news data)
-- 💻 **Using HttpClient** within service layers
-- 🧩 **Building modular, decoupled components** for easy maintenance and scalability
-- 🔁 **Connecting frontend views** with dynamic API-driven content
+- Integrated with **IMDB Film API** using RapidAPI to pull top-rated movie data
+- Implemented a dynamic **hotel listing feature** by querying Booking.com’s public API, filtered by rating and location
+- Practiced deserialization, API key management, rate-limiting control, and live service testing
+
+> This expanded the project’s scope from basic internal APIs to **real-world service-oriented communication**.
 
 ---
 
----
+## 🛠️ Tech Stack
 
-## 📊 Real-Time Communication with SignalR
-
-This project implements a simulated **real-time dashboard system** using SignalR technology.
-
-### 📡 SignalR Components:
-
-- `SignalRApi`: Core SignalR Hub broadcasting live visitor data
-- `SignalRApiForSql`: Sends real-time updates triggered by SQL changes
-- `SignalRConsume`: Consumes and renders real-time data on the client side
-
-> 📈 **Use Cases**:
-> - Live visitor analytics  
-> - Instant notifications  
-> - Admin panel charting and data visualization
+- **C#**, **ASP.NET Core Web API**
+- **Entity Framework Core** – Code First
+- **PostgreSQL** & **SQL Server** support
+- **Swagger UI** – for live testing
+- **HttpClientFactory** – external API consumption
+- **AutoMapper**, **DTO Structure**, **SOLID Principles**
 
 ---
 
-## 🧠 Final Thoughts
+## 🔗 Integration with TraversalCoreProject
 
-This project represents the output of a self-driven learning journey through a **100-lesson** ASP.NET Core series.  
-Throughout the process, I continuously challenged myself to:
+This API is fully integrated with the [TraversalCoreProject](https://github.com/mrvekratl/TraversalCoreProject).  
+The front-facing application uses this service to:
 
-- ✅ Refactor and improve upon tutorial code
-- ✅ Apply real enterprise design patterns (CQRS, DTOs, Clean Architecture)
-- ✅ Experiment with PostgreSQL, RapidAPI, and SignalR
-- ✅ Break down responsibilities into separate services and modules
+- Fetch and display destination & reservation data
+- Populate admin dashboards with real-time statistics
+- Show external data such as weather or hotel info from third-party APIs
 
-> I consider this project as more than just a tutorial—it's a **milestone** in my growth as a backend developer.
-
----
-
-## 📎 Resources & Links
-
-- 🎓 **Course Playlist**: [YouTube – Traversal Mini Project by Murat Yücedağ](https://www.youtube.com/playlist?list=PLKnjBHu2xXNMK5MBogdXmsXVi3K_eEZT5)  
-- 🧠 **API Repository**: [TraversalApiProject](https://github.com/mrvekratl/TraversalApiProject)  
-- 📧 **Contact**: [LinkedIn – Merve Kıratlı](https://www.linkedin.com/in/merve-kiratli-0b049a187)
+This design promotes **separation of concerns**, **reusability**, and **scalability**, closely mimicking enterprise-grade architecture.
 
 ---
 
-## 🙏 Special Thanks
+## 💡 What I Learned
 
-Huge thanks to **Murat Yücedağ**, whose dedication to teaching made this project possible.  
-His **clear instruction**, **realistic design choices**, and **depth of knowledge** created an ideal environment for hands-on learning.
+- 📐 How to design and document APIs that are **frontend-consumable**
+- 🧩 Working with **modular, scalable service structures**
+- 🌐 Using **HttpClient** and **external APIs** in production-level code
+- 📦 Packaging data using DTOs and keeping architecture clean and reusable
+- 🧪 Validating and testing endpoints using Swagger & Postman
+
+This was not just a tutorial exercise — it was an exploration of **how APIs are built, consumed, and extended**.
 
 ---
 
-## ⭐️ For Recruiters
+## 🙌 Special Thanks
 
-If you're searching for a backend developer who is:
+Gratitude to [Murat Yücedağ](https://www.youtube.com/playlist?list=PLKnjBHu2xXNMK5MBogdXmsXVi3K_eEZT5), whose 100-part training series enabled this project. His practical and real-world approach to backend development made it possible to work through production-level challenges confidently.
 
-- 🧠 Inquisitive and driven
-- 👩‍💻 Dedicated to writing clean, scalable code
-- 🌐 Skilled in API design and integration
-- 🛠️ Familiar with enterprise practices and real-world scenarios
+---
 
-Feel free to connect.  
-**Let’s build something great together!** 🚀
+## 💼 For Recruiters
+
+This repository reflects my skills in:
+
+- ✅ Designing maintainable REST APIs
+- ✅ Building real-world, modular, and scalable backend systems
+- ✅ Integrating third-party data through API consumption
+- ✅ Bridging projects for enterprise-level communication
+
+If you’re seeking a backend developer with hands-on experience, architectural thinking, and a passion for continuous learning — **let’s connect!**
+
+🔗 [LinkedIn](https://www.linkedin.com/in/merve-kiratli-0b049a187/)
+
+
+
+
+
